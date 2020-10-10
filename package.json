@@ -1,0 +1,31 @@
+{
+  "name": "screen-display",
+  "version": "1.0.2",
+  "description": "一个凑合能用的大屏兼容展示方案",
+  "main": "src/index.js",
+  "module": "dist/screen-display.esm.js",
+  "browser": "dist/screen-display.umd.js",
+  "author": "zhuyuqian <416556102@qq.com>",
+  "license": "ISC",
+  "keywords": [
+    "dashboard",
+    "tools",
+    "javascript"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "rollup": "^2.29.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "uglify-es": "^3.3.9"
+  },
+  "scripts": {
+    "dev": "rollup -c rollup.config.js -w",
+    "build": "rollup -c rollup.config.js",
+    "test": "echo \\\"Error: no demo specified\\\" && exit 1"
+  }
+}
