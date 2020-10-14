@@ -1,14 +1,28 @@
 {
   "name": "screen-display",
   "version": "1.0.2",
-  "description": "一个凑合能用的大屏兼容展示方案",
+  "description": "一个轻量大屏兼容展示方案",
   "main": "src/index.js",
   "module": "dist/screen-display.esm.js",
   "browser": "dist/screen-display.umd.js",
-  "author": "zhuyuqian <416556102@qq.com>",
-  "license": "ISC",
+  "author": {
+    "name": "ZhuYuqian",
+    "email": "416556102@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhuyuqian/screen-display"
+  },
+  "bugs": {
+    "url": "https://github.com/zhuyuqian/screen-display/issues",
+    "email": "416556102@qq.com"
+  },
+  "publishConfig": {
+    "registry": "https://www.npmjs.com/package/screen-display"
+  },
   "keywords": [
     "dashboard",
+    "screen",
     "tools",
     "javascript"
   ],
@@ -27,5 +41,6 @@
     "dev": "rollup -c rollup.config.js -w",
     "build": "rollup -c rollup.config.js",
     "test": "echo \\\"Error: no demo specified\\\" && exit 1"
-  }
+  },
+  "license": "ISC"
 }
