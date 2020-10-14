@@ -1,7 +1,16 @@
 import {getEl, getParentEl, getOffsetByEl} from "./util/dom";
-import cfg from './config';
 
-class Dashboard {
+// 默认值
+const cfg = {
+    designWidth: 1920,
+    designHeight: 1080,
+    compatPosition: 'top-left',
+    resizeTimer: '300',
+    resizeEvent: 'window',
+    disabledResize: false
+}
+
+export default class ScreenDisplay {
     constructor(options) {
         this.$options = options;
         // 绑定的el
@@ -130,5 +139,3 @@ class Dashboard {
         this._unbindResizeByEvent();
     }
 }
-
-export default Dashboard;

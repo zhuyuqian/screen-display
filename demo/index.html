@@ -24,8 +24,10 @@
 </head>
 <body>
 <div id="dashboard">大屏内容</div>
-<script src="../dist/screen-display.umd.js"></script>
-<script>
+<!--<script src="../dist/screen-display.min.js"></script>-->
+<script type="module">
+    import ScreenDisplay from "../dist/screen-display.esm.js";
+
     let screen = new ScreenDisplay({
         el: '#dashboard',
         compatPosition: 'center-left',

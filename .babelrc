@@ -9,6 +9,7 @@
       }
     ]
   ],
+  "comments": false,
   "plugins": [
     [
       "@babel/plugin-transform-runtime"

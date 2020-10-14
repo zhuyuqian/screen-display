@@ -2,7 +2,7 @@
 
 [![Latest Version on NPM](https://img.shields.io/npm/v/screen-display.svg?style=flat-square)](https://npmjs.com/package/screen-display)
 
-> 还凑合能用的一个大屏数据展示方案😂
+> 一个轻量级一个大屏数据展示方案
 
 ## 目录
 
