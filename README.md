@@ -2,7 +2,7 @@
 
 [![Latest Version on NPM](https://img.shields.io/npm/v/screen-display.svg?style=flat-square)](https://npmjs.com/package/screen-display)
 
-> 一个轻量级一个大屏数据展示方案
+> 一个轻量级的大屏数据展示方案
 
 ## 目录
 
@@ -97,11 +97,11 @@ let options = {resizeTimer: 300};
 #### resizeEvent
 类型: `String`<br>
 必须: `false`<br>
-默认: `window`<br>
-说明：默认当window发生resize时，触发大屏重新计算，后续可能会添加，也有可能删除这个参数
+默认: `window,parent`<br>
+说明：默认当window或者上级元素发生resize时，触发大屏重新计算
 
 ```javascript
-let options = {resizeEvent: 'window'};
+let options = {resizeEvent: 'window,parent'};
 ```
 
 #### disabledResize
@@ -131,6 +131,8 @@ let options = {compatPosition: 'top-right'};
 let options = {compatPosition: 'bottom-left'};
 // 纵向居中，横向贴左
 let options = {compatPosition: 'center-left'};
+// 纵向居中，横向居中
+let options = {compatPosition: 'center-center'};
 ```
 
 #### onResize
@@ -168,7 +170,7 @@ screen.resize()
 
 `Function`
 
-> 目前仅仅是为了移除对window.resize的事件监听
+> 移除对window.resize和parent.resize的事件监听
 
 ```javascript
 let screen = new ScreenDisplay({el: '#dashboard'});

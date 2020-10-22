@@ -1,12 +1,13 @@
-import {getEl, getParentEl, getOffsetByEl} from "./util/dom";
+import {getEl, getParentEl, getOffsetByEl} from "./util/el.js";
+import ElResize from "./util/el-resize.js";
 
 // 默认值
 const cfg = {
     designWidth: 1920,
     designHeight: 1080,
-    compatPosition: 'top-left',
+    compatPosition: 'center-center',
     resizeTimer: '300',
-    resizeEvent: 'window',
+    resizeEvent: 'window,parent',
     disabledResize: false
 }
 
@@ -84,6 +85,9 @@ export default class ScreenDisplay {
             case 'center-left':
                 this._translate = `0,${(this._pHeight - this.designHeight * this._scaling) / 2 / this._scaling}px`;
                 break;
+            case 'center-center':
+                this._translate = `${(this._pWidth - this.designWidth * this._scaling) / 2 / this._scaling}px,${(this._pHeight - this.designHeight * this._scaling) / 2 / this._scaling}px`;
+                break;
         }
     }
 
@@ -104,9 +108,7 @@ export default class ScreenDisplay {
     // 绑定重新计算所需要的事件
     _bindResizeByEvent() {
         this._bind = () => {
-            if (this.disabledResize) {
-                return;
-            }
+            if (this.disabledResize) return;
             if (this._resizeTimeout) {
                 clearTimeout(this._resizeTimeout);
                 this._resizeTimeout = null;
@@ -116,9 +118,15 @@ export default class ScreenDisplay {
                 this._resizeTimeout = null;
             }, this.resizeTimer)
         }
-
+        // 监听浏览器改变大小事件
         if (this.resizeEvent.includes('window')) {
             window.addEventListener('resize', this._bind);
+        }
+        // 监听父级div变化事件
+        if (this.resizeEvent.includes('parent')) {
+            ElResize.on(this.$parent, () => {
+                this._bind()
+            })
         }
     }
 
@@ -126,6 +134,10 @@ export default class ScreenDisplay {
     _unbindResizeByEvent() {
         if (this.resizeEvent.includes('window')) {
             window.removeEventListener('resize', this._bind);
+        }
+        // 监听父级div变化事件
+        if (this.resizeEvent.includes('parent')) {
+            ElResize.off(this.$parent)
         }
     }
 

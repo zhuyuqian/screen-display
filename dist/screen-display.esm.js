@@ -523,12 +523,137 @@ var getOffsetByEl = function getOffsetByEl(el) {
   };
 };
 
+var elResize = {
+  _handleResize: function _handleResize(e) {
+    var ele = e.target || e.srcElement;
+    var trigger = ele.__resizeTrigger__;
+
+    if (trigger) {
+      var handlers = trigger.__z_resizeListeners;
+
+      if (handlers) {
+        var size = handlers.length;
+
+        for (var i = 0; i < size; i++) {
+          var h = handlers[i];
+          var handler = h.handler;
+          var context = h.context;
+          handler.apply(context, [e]);
+        }
+      }
+    }
+  },
+  _removeHandler: function _removeHandler(ele, handler, context) {
+    var handlers = ele.__z_resizeListeners;
+
+    if (handlers) {
+      var size = handlers.length;
+
+      for (var i = 0; i < size; i++) {
+        var h = handlers[i];
+
+        if (h.handler === handler && h.context === context) {
+          handlers.splice(i, 1);
+          return;
+        }
+      }
+    }
+  },
+  _createResizeTrigger: function _createResizeTrigger(ele) {
+    var obj = document.createElement('object');
+    obj.setAttribute('style', 'display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden;opacity: 0; pointer-events: none; z-index: -1;');
+    obj.onload = elResize._handleObjectLoad;
+    obj.type = 'text/html';
+    ele.appendChild(obj);
+    obj.data = 'about:blank';
+    return obj;
+  },
+  _handleObjectLoad: function _handleObjectLoad(evt) {
+    this.contentDocument.defaultView.__resizeTrigger__ = this.__resizeElement__;
+    this.contentDocument.defaultView.addEventListener('resize', elResize._handleResize);
+  }
+};
+
+if (document.attachEvent) {
+  elResize.on = function (ele, handler, context) {
+    var handlers = ele.__z_resizeListeners;
+
+    if (!handlers) {
+      handlers = [];
+      ele.__z_resizeListeners = handlers;
+      ele.__resizeTrigger__ = ele;
+      ele.attachEvent('onresize', elResize._handleResize);
+    }
+
+    handlers.push({
+      handler: handler,
+      context: context
+    });
+  };
+
+  elResize.off = function (ele, handler, context) {
+    var handlers = ele.__z_resizeListeners;
+
+    if (handlers) {
+      elResize._removeHandler(ele, handler, context);
+
+      if (handlers.length === 0) {
+        ele.detachEvent('onresize', elResize._handleResize);
+        delete ele.__z_resizeListeners;
+      }
+    }
+  };
+} else {
+  elResize.on = function (ele, handler, context) {
+    var handlers = ele.__z_resizeListeners;
+
+    if (!handlers) {
+      handlers = [];
+      ele.__z_resizeListeners = handlers;
+
+      if (getComputedStyle(ele, null).position === 'static') {
+        ele.style.position = 'relative';
+      }
+
+      var obj = elResize._createResizeTrigger(ele);
+
+      ele.__resizeTrigger__ = obj;
+      obj.__resizeElement__ = ele;
+    }
+
+    handlers.push({
+      handler: handler,
+      context: context
+    });
+  };
+
+  elResize.off = function (ele, handler, context) {
+    var handlers = ele.__z_resizeListeners;
+
+    if (handlers) {
+      elResize._removeHandler(ele, handler, context);
+
+      if (handlers.length === 0) {
+        var trigger = ele.__resizeTrigger__;
+
+        if (trigger) {
+          trigger.contentDocument.defaultView.removeEventListener('resize', elResize._handleResize);
+          ele.removeChild(trigger);
+          delete ele.__resizeTrigger__;
+        }
+
+        delete ele.__z_resizeListeners;
+      }
+    }
+  };
+}
+
 var cfg = {
   designWidth: 1920,
   designHeight: 1080,
-  compatPosition: 'top-left',
+  compatPosition: 'center-center',
   resizeTimer: '300',
-  resizeEvent: 'window',
+  resizeEvent: 'window,parent',
   disabledResize: false
 };
 
@@ -604,6 +729,10 @@ var ScreenDisplay = function () {
         case 'center-left':
           this._translate = "0,".concat((this._pHeight - this.designHeight * this._scaling) / 2 / this._scaling, "px");
           break;
+
+        case 'center-center':
+          this._translate = "".concat((this._pWidth - this.designWidth * this._scaling) / 2 / this._scaling, "px,").concat((this._pHeight - this.designHeight * this._scaling) / 2 / this._scaling, "px");
+          break;
       }
     }
   }, {
@@ -626,9 +755,7 @@ var ScreenDisplay = function () {
       var _this = this;
 
       this._bind = function () {
-        if (_this.disabledResize) {
-          return;
-        }
+        if (_this.disabledResize) return;
 
         if (_this._resizeTimeout) {
           clearTimeout(_this._resizeTimeout);
@@ -645,12 +772,22 @@ var ScreenDisplay = function () {
       if (this.resizeEvent.includes('window')) {
         window.addEventListener('resize', this._bind);
       }
+
+      if (this.resizeEvent.includes('parent')) {
+        elResize.on(this.$parent, function () {
+          _this._bind();
+        });
+      }
     }
   }, {
     key: "_unbindResizeByEvent",
     value: function _unbindResizeByEvent() {
       if (this.resizeEvent.includes('window')) {
         window.removeEventListener('resize', this._bind);
+      }
+
+      if (this.resizeEvent.includes('parent')) {
+        elResize.off(this.$parent);
       }
     }
   }, {
