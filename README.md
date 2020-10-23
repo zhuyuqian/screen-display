@@ -2,7 +2,7 @@
 
 [![Latest Version on NPM](https://img.shields.io/npm/v/screen-display.svg?style=flat-square)](https://npmjs.com/package/screen-display)
 
-> 一个轻量级的大屏数据展示方案
+> 一个轻量级的大屏数据展示适配方案
 
 ## 目录
 
@@ -89,6 +89,7 @@ let options = {designHeight: 1080};
 必须: `false`<br>
 默认: `300`<br>
 说明：默认会监听浏览器resize事件，当发生resize时，延迟多久重新计算大屏，单位毫秒。
+注意：如果配置`-1`，则没有延迟。
 
 ```javascript
 let options = {resizeTimer: 300};
@@ -97,11 +98,14 @@ let options = {resizeTimer: 300};
 #### resizeEvent
 类型: `String`<br>
 必须: `false`<br>
-默认: `window,parent`<br>
+默认: `window`<br>
 说明：默认当window或者上级元素发生resize时，触发大屏重新计算
 
 ```javascript
-let options = {resizeEvent: 'window,parent'};
+// 监听window resize
+let options = {resizeEvent: 'window'};
+// 监听上级div resize
+let options = {resizeEvent: 'parent'};
 ```
 
 #### disabledResize
@@ -145,8 +149,8 @@ let options = {compatPosition: 'center-center'};
 let options = {
     onResize (instance, {actualWidth,actualHeight}){
         // instance：当前实例
-        // actualWidth：当前大屏实际长度
         // actualWidth：当前大屏实际宽度
+        // actualHeight：当前大屏实际高度
     }
 };
 ```

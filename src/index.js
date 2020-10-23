@@ -6,8 +6,8 @@ const cfg = {
     designWidth: 1920,
     designHeight: 1080,
     compatPosition: 'center-center',
-    resizeTimer: '300',
-    resizeEvent: 'window,parent',
+    resizeTimer: 300,
+    resizeEvent: 'window',
     disabledResize: false
 }
 
@@ -16,6 +16,7 @@ export default class ScreenDisplay {
         this.$options = options;
         // 绑定的el
         this.$el = getEl(options.el);
+        if (!this.$el) return console.error('请配置好需要适配的dom节点到el参数上');
         // 上级el
         this.$parent = getParentEl(this.$el);
         // 设计稿宽度
@@ -38,8 +39,8 @@ export default class ScreenDisplay {
         this._translate = '0,0'; // 偏移量
         this._resizeTimeout = null; // 延迟定时器
 
-        this._resize();
         this._bindResizeByEvent();
+        this._resize();
     }
 
     // 重置
@@ -109,6 +110,7 @@ export default class ScreenDisplay {
     _bindResizeByEvent() {
         this._bind = () => {
             if (this.disabledResize) return;
+            if (this.resizeTimer === -1) return this._resize();
             if (this._resizeTimeout) {
                 clearTimeout(this._resizeTimeout);
                 this._resizeTimeout = null;
@@ -118,27 +120,14 @@ export default class ScreenDisplay {
                 this._resizeTimeout = null;
             }, this.resizeTimer)
         }
-        // 监听浏览器改变大小事件
-        if (this.resizeEvent.includes('window')) {
-            window.addEventListener('resize', this._bind);
-        }
-        // 监听父级div变化事件
-        if (this.resizeEvent.includes('parent')) {
-            ElResize.on(this.$parent, () => {
-                this._bind()
-            })
-        }
+        if (this.resizeEvent.includes('window')) window.addEventListener('resize', this._bind);
+        if (this.resizeEvent.includes('parent')) ElResize.on(this.$parent, this._bind)
     }
 
     // 解绑重新计算所需要的事件
     _unbindResizeByEvent() {
-        if (this.resizeEvent.includes('window')) {
-            window.removeEventListener('resize', this._bind);
-        }
-        // 监听父级div变化事件
-        if (this.resizeEvent.includes('parent')) {
-            ElResize.off(this.$parent)
-        }
+        if (this.resizeEvent.includes('window')) window.removeEventListener('resize', this._bind);
+        if (this.resizeEvent.includes('parent')) ElResize.off(this.$parent);
     }
 
     // 手动resize

@@ -652,8 +652,8 @@ var cfg = {
   designWidth: 1920,
   designHeight: 1080,
   compatPosition: 'center-center',
-  resizeTimer: '300',
-  resizeEvent: 'window,parent',
+  resizeTimer: 300,
+  resizeEvent: 'window',
   disabledResize: false
 };
 
@@ -663,6 +663,7 @@ var ScreenDisplay = function () {
 
     this.$options = options;
     this.$el = getEl(options.el);
+    if (!this.$el) return console.error('请配置好需要适配的dom节点到el参数上');
     this.$parent = getParentEl(this.$el);
     this.designWidth = options.designWidth || cfg.designWidth;
     this.designHeight = options.designHeight || cfg.designHeight;
@@ -677,9 +678,9 @@ var ScreenDisplay = function () {
     this._translate = '0,0';
     this._resizeTimeout = null;
 
-    this._resize();
-
     this._bindResizeByEvent();
+
+    this._resize();
   }
 
   createClass(ScreenDisplay, [{
@@ -756,6 +757,7 @@ var ScreenDisplay = function () {
 
       this._bind = function () {
         if (_this.disabledResize) return;
+        if (_this.resizeTimer === -1) return _this._resize();
 
         if (_this._resizeTimeout) {
           clearTimeout(_this._resizeTimeout);
@@ -769,26 +771,14 @@ var ScreenDisplay = function () {
         }, _this.resizeTimer);
       };
 
-      if (this.resizeEvent.includes('window')) {
-        window.addEventListener('resize', this._bind);
-      }
-
-      if (this.resizeEvent.includes('parent')) {
-        elResize.on(this.$parent, function () {
-          _this._bind();
-        });
-      }
+      if (this.resizeEvent.includes('window')) window.addEventListener('resize', this._bind);
+      if (this.resizeEvent.includes('parent')) elResize.on(this.$parent, this._bind);
     }
   }, {
     key: "_unbindResizeByEvent",
     value: function _unbindResizeByEvent() {
-      if (this.resizeEvent.includes('window')) {
-        window.removeEventListener('resize', this._bind);
-      }
-
-      if (this.resizeEvent.includes('parent')) {
-        elResize.off(this.$parent);
-      }
+      if (this.resizeEvent.includes('window')) window.removeEventListener('resize', this._bind);
+      if (this.resizeEvent.includes('parent')) elResize.off(this.$parent);
     }
   }, {
     key: "resize",

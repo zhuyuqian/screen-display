@@ -1,11 +1,10 @@
 {
   "name": "screen-display",
-  "version": "1.0.4",
-  "description": "一个轻量级的大屏数据展示方案",
+  "version": "1.0.5",
+  "description": "一个轻量级的大屏数据展示适配方案",
   "module": "dist/screen-display.esm.js",
   "unpkg": "dist/screen-display.min.js",
   "files": [
-    "src",
     "dist/*.js"
   ],
   "scripts": {

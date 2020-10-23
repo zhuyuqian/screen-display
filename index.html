@@ -29,13 +29,15 @@
 <!--<script src="./dist/screen-display.min.js"></script>-->
 <script type="module">
     import ScreenDisplay from "./dist/screen-display.esm.js";
+    // import ScreenDisplay from "./src/index.js";
 
     let screen = new ScreenDisplay({
-        el: '#dashboard'
+        resizeEvent: 'parent',
+        resizeTimer: -1,
+        onResize: (a) => {
+            console.log(a)
+        }
     })
-    setTimeout(() => {
-        document.querySelector('#app').style.width = '200px'
-    }, 3000)
 </script>
 </body>
 </html>

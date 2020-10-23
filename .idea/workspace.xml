@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1ff8682f-28ad-47f6-840d-43e1520376ad" name="默认的" comment="update：1.0.34">
+      <change afterPath="$PROJECT_DIR$/.idea/dashboard.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/screen-display.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/screen-display.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/screen-display.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/screen-display.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ifMzFYxVXL2KjRS9GCt4OiifJq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="useFileNestingRules" value="false" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.build">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dashboard/test/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/screen-display/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="JavaScript 调试.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ff8682f-28ad-47f6-840d-43e1520376ad" name="默认的" comment="" />
+      <created>1602294453340</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602294453340</updated>
+      <workItem from="1602294454463" duration="22243000" />
+      <workItem from="1602641926466" duration="1896000" />
+      <workItem from="1602644512637" duration="10329000" />
+      <workItem from="1602662000804" duration="91000" />
+      <workItem from="1602667413659" duration="1464000" />
+      <workItem from="1603360943525" duration="2752000" />
+      <workItem from="1603364432469" duration="213000" />
+      <workItem from="1603444128535" duration="3658000" />
+    </task>
+    <task id="LOCAL-00001" summary="update:package.json">
+      <created>1602643473045</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602643473045</updated>
+    </task>
+    <task id="LOCAL-00002" summary="upgrade：1.0.3">
+      <created>1602661848961</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602661848961</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update：1.0.4">
+      <created>1603363531212</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603363531212</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update:package.json" />
+    <MESSAGE value="upgrade：1.0.3" />
+    <MESSAGE value="update：1.0.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="update：1.0.4" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="724" y="369" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602325573104">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="724" y="369" key="#com.intellij.fileTypes.FileTypeChooser/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1602325573104" />
+    <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602655942103">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1602655942103" />
+    <state x="513" y="135" key="CommitChangelistDialog2" timestamp="1603363531096">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="513" y="135" key="CommitChangelistDialog2/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603363531096" />
+    <state x="789" y="464" width="545" height="192" key="Github.ShareDialog" timestamp="1602326831355">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="789" y="464" width="545" height="192" key="Github.ShareDialog/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1602326831355" />
+    <state x="628" y="271" key="Github.UntrackedFilesDialog" timestamp="1602326864096">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="628" y="271" key="Github.UntrackedFilesDialog/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1602326864096" />
+    <state width="1771" height="318" key="GridCell.Tab.0.bottom" timestamp="1603447596407">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1771" height="318" key="GridCell.Tab.0.bottom/1792.-565.1920.1057/0.0.1792.1120/-128.-1057.1920.1057@0.0.1792.1120" timestamp="1603363772936" />
+    <state width="1771" height="318" key="GridCell.Tab.0.bottom/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603447596407" />
+    <state width="1771" height="318" key="GridCell.Tab.0.center" timestamp="1603447596405">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1771" height="318" key="GridCell.Tab.0.center/1792.-565.1920.1057/0.0.1792.1120/-128.-1057.1920.1057@0.0.1792.1120" timestamp="1603363772933" />
+    <state width="1771" height="318" key="GridCell.Tab.0.center/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603447596405" />
+    <state width="1771" height="318" key="GridCell.Tab.0.left" timestamp="1603447596404">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1771" height="318" key="GridCell.Tab.0.left/1792.-565.1920.1057/0.0.1792.1120/-128.-1057.1920.1057@0.0.1792.1120" timestamp="1603363772932" />
+    <state width="1771" height="318" key="GridCell.Tab.0.left/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603447596404" />
+    <state width="1771" height="318" key="GridCell.Tab.0.right" timestamp="1603447596406">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1771" height="318" key="GridCell.Tab.0.right/1792.-565.1920.1057/0.0.1792.1120/-128.-1057.1920.1057@0.0.1792.1120" timestamp="1603363772935" />
+    <state width="1771" height="318" key="GridCell.Tab.0.right/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603447596406" />
+    <state x="604" y="269" key="RollbackChangesDialog" timestamp="1603445673163">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="604" y="269" key="RollbackChangesDialog/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603445673163" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1603363532554">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603363532554" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1602311147918">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1602311147918" />
+  </component>
+</project>
