@@ -13,7 +13,7 @@
 
 ### 效果
 
-[点我查看](https://vuedirective.zyq.life/dashboard)
+[点我查看](https://www.zyq.life/npm)
 
 ### 特性
 
