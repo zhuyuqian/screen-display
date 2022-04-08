@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ff8682f-28ad-47f6-840d-43e1520376ad" name="默认的" comment="update：1.0.34">
-      <change afterPath="$PROJECT_DIR$/.idea/dashboard.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1ff8682f-28ad-47f6-840d-43e1520376ad" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/screen-display.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/screen-display.esm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/screen-display.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/screen-display.min.js" afterDir="false" />
@@ -67,7 +64,10 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="JavaScript 调试.index.html (1)">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/screen-display/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/dashboard/test/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -86,6 +86,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript 调试.index.html (1)" />
         <item itemvalue="npm.build" />
         <item itemvalue="JavaScript 调试.index.html" />
       </list>
@@ -106,7 +107,19 @@
       <workItem from="1602667413659" duration="1464000" />
       <workItem from="1603360943525" duration="2752000" />
       <workItem from="1603364432469" duration="213000" />
-      <workItem from="1603444128535" duration="3658000" />
+      <workItem from="1603444128535" duration="3715000" />
+      <workItem from="1603511010439" duration="1088000" />
+      <workItem from="1603529706828" duration="186000" />
+      <workItem from="1603603607826" duration="205000" />
+      <workItem from="1603623006434" duration="175000" />
+      <workItem from="1603624536307" duration="83000" />
+      <workItem from="1603676252403" duration="183000" />
+      <workItem from="1603709970276" duration="37000" />
+      <workItem from="1603800606209" duration="794000" />
+      <workItem from="1603973153728" duration="1701000" />
+      <workItem from="1604627150591" duration="14000" />
+      <workItem from="1638261063341" duration="52000" />
+      <workItem from="1649403892817" duration="905000" />
     </task>
     <task id="LOCAL-00001" summary="update:package.json">
       <created>1602643473045</created>
@@ -129,7 +142,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603363531212</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update：1.0.5">
+      <created>1603447863198</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603447863198</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update：README">
+      <created>1603512126967</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603512126967</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +178,9 @@
     <MESSAGE value="update:package.json" />
     <MESSAGE value="upgrade：1.0.3" />
     <MESSAGE value="update：1.0.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="update：1.0.4" />
+    <MESSAGE value="update：1.0.5" />
+    <MESSAGE value="update：README" />
+    <option name="LAST_COMMIT_MESSAGE" value="update：README" />
   </component>
   <component name="WindowStateProjectService">
     <state x="724" y="369" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602325573104">
@@ -162,10 +191,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="634" y="314" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1602655942103" />
-    <state x="513" y="135" key="CommitChangelistDialog2" timestamp="1603363531096">
+    <state x="513" y="135" key="CommitChangelistDialog2" timestamp="1603512126821">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="513" y="135" key="CommitChangelistDialog2/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603363531096" />
+    <state x="513" y="135" key="CommitChangelistDialog2/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603512126821" />
     <state x="789" y="464" width="545" height="192" key="Github.ShareDialog" timestamp="1602326831355">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -174,34 +203,34 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="628" y="271" key="Github.UntrackedFilesDialog/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1602326864096" />
-    <state width="1771" height="318" key="GridCell.Tab.0.bottom" timestamp="1603447596407">
+    <state width="1771" height="318" key="GridCell.Tab.0.bottom" timestamp="1603447875026">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1771" height="318" key="GridCell.Tab.0.bottom/1792.-565.1920.1057/0.0.1792.1120/-128.-1057.1920.1057@0.0.1792.1120" timestamp="1603363772936" />
-    <state width="1771" height="318" key="GridCell.Tab.0.bottom/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603447596407" />
-    <state width="1771" height="318" key="GridCell.Tab.0.center" timestamp="1603447596405">
+    <state width="1771" height="318" key="GridCell.Tab.0.bottom/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603447875026" />
+    <state width="1771" height="318" key="GridCell.Tab.0.center" timestamp="1603447875024">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1771" height="318" key="GridCell.Tab.0.center/1792.-565.1920.1057/0.0.1792.1120/-128.-1057.1920.1057@0.0.1792.1120" timestamp="1603363772933" />
-    <state width="1771" height="318" key="GridCell.Tab.0.center/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603447596405" />
-    <state width="1771" height="318" key="GridCell.Tab.0.left" timestamp="1603447596404">
+    <state width="1771" height="318" key="GridCell.Tab.0.center/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603447875024" />
+    <state width="1771" height="318" key="GridCell.Tab.0.left" timestamp="1603447875023">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1771" height="318" key="GridCell.Tab.0.left/1792.-565.1920.1057/0.0.1792.1120/-128.-1057.1920.1057@0.0.1792.1120" timestamp="1603363772932" />
-    <state width="1771" height="318" key="GridCell.Tab.0.left/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603447596404" />
-    <state width="1771" height="318" key="GridCell.Tab.0.right" timestamp="1603447596406">
+    <state width="1771" height="318" key="GridCell.Tab.0.left/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603447875023" />
+    <state width="1771" height="318" key="GridCell.Tab.0.right" timestamp="1603447875025">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1771" height="318" key="GridCell.Tab.0.right/1792.-565.1920.1057/0.0.1792.1120/-128.-1057.1920.1057@0.0.1792.1120" timestamp="1603363772935" />
-    <state width="1771" height="318" key="GridCell.Tab.0.right/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603447596406" />
+    <state width="1771" height="318" key="GridCell.Tab.0.right/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603447875025" />
     <state x="604" y="269" key="RollbackChangesDialog" timestamp="1603445673163">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="604" y="269" key="RollbackChangesDialog/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603445673163" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1603363532554">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1603512128364">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603363532554" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/1792.-588.1920.1080/0.0.1792.1120/-128.-1080.1920.1080@0.0.1792.1120" timestamp="1603512128364" />
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1602311147918">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

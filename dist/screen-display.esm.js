@@ -290,80 +290,6 @@ var _arrayIncludes = function (IS_INCLUDES) {
   };
 };
 
-var _wks = createCommonjsModule(function (module) {
-var store = _shared('wks');
-
-var Symbol = _global.Symbol;
-var USE_SYMBOL = typeof Symbol == 'function';
-
-var $exports = module.exports = function (name) {
-  return store[name] || (store[name] =
-    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : _uid)('Symbol.' + name));
-};
-
-$exports.store = store;
-});
-
-// 22.1.3.31 Array.prototype[@@unscopables]
-var UNSCOPABLES = _wks('unscopables');
-var ArrayProto = Array.prototype;
-if (ArrayProto[UNSCOPABLES] == undefined) _hide(ArrayProto, UNSCOPABLES, {});
-var _addToUnscopables = function (key) {
-  ArrayProto[UNSCOPABLES][key] = true;
-};
-
-// https://github.com/tc39/Array.prototype.includes
-
-var $includes = _arrayIncludes(true);
-
-_export(_export.P, 'Array', {
-  includes: function includes(el /* , fromIndex = 0 */) {
-    return $includes(this, el, arguments.length > 1 ? arguments[1] : undefined);
-  }
-});
-
-_addToUnscopables('includes');
-
-// 7.2.8 IsRegExp(argument)
-
-
-var MATCH = _wks('match');
-var _isRegexp = function (it) {
-  var isRegExp;
-  return _isObject(it) && ((isRegExp = it[MATCH]) !== undefined ? !!isRegExp : _cof(it) == 'RegExp');
-};
-
-// helper for String#{startsWith, endsWith, includes}
-
-
-
-var _stringContext = function (that, searchString, NAME) {
-  if (_isRegexp(searchString)) throw TypeError('String#' + NAME + " doesn't accept regex!");
-  return String(_defined(that));
-};
-
-var MATCH$1 = _wks('match');
-var _failsIsRegexp = function (KEY) {
-  var re = /./;
-  try {
-    '/./'[KEY](re);
-  } catch (e) {
-    try {
-      re[MATCH$1] = false;
-      return !'/./'[KEY](re);
-    } catch (f) { /* empty */ }
-  } return true;
-};
-
-var INCLUDES = 'includes';
-
-_export(_export.P + _export.F * _failsIsRegexp(INCLUDES), 'String', {
-  includes: function includes(searchString /* , position = 0 */) {
-    return !!~_stringContext(this, searchString, INCLUDES)
-      .indexOf(searchString, arguments.length > 1 ? arguments[1] : undefined);
-  }
-});
-
 var shared = _shared('keys');
 
 var _sharedKey = function (key) {
@@ -653,7 +579,6 @@ var cfg = {
   designHeight: 1080,
   compatPosition: 'center-center',
   resizeTimer: 300,
-  resizeEvent: 'window',
   disabledResize: false
 };
 
@@ -669,7 +594,6 @@ var ScreenDisplay = function () {
     this.designHeight = options.designHeight || cfg.designHeight;
     this.compatPosition = options.compatPosition || cfg.compatPosition;
     this.resizeTimer = options.resizeTimer || cfg.resizeTimer;
-    this.resizeEvent = options.resizeEvent || cfg.resizeEvent;
     this.disabledResize = options.disabledResize || cfg.disabledResize;
     this._diffUnit = 0;
     this._pWidth = 0;
@@ -771,14 +695,12 @@ var ScreenDisplay = function () {
         }, _this.resizeTimer);
       };
 
-      if (this.resizeEvent.includes('window')) window.addEventListener('resize', this._bind);
-      if (this.resizeEvent.includes('parent')) elResize.on(this.$parent, this._bind);
+      elResize.on(this.$parent, this._bind);
     }
   }, {
     key: "_unbindResizeByEvent",
     value: function _unbindResizeByEvent() {
-      if (this.resizeEvent.includes('window')) window.removeEventListener('resize', this._bind);
-      if (this.resizeEvent.includes('parent')) elResize.off(this.$parent);
+      elResize.off(this.$parent);
     }
   }, {
     key: "resize",

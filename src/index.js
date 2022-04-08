@@ -7,7 +7,6 @@ const cfg = {
     designHeight: 1080,
     compatPosition: 'center-center',
     resizeTimer: 300,
-    resizeEvent: 'window',
     disabledResize: false
 }
 
@@ -27,8 +26,6 @@ export default class ScreenDisplay {
         this.compatPosition = options.compatPosition || cfg.compatPosition;
         // 屏幕发生变化时内部重新计算的延迟
         this.resizeTimer = options.resizeTimer || cfg.resizeTimer;
-        // 重新计算的事件
-        this.resizeEvent = options.resizeEvent || cfg.resizeEvent;
         // 是否禁用resize
         this.disabledResize = options.disabledResize || cfg.disabledResize;
 
@@ -120,14 +117,12 @@ export default class ScreenDisplay {
                 this._resizeTimeout = null;
             }, this.resizeTimer)
         }
-        if (this.resizeEvent.includes('window')) window.addEventListener('resize', this._bind);
-        if (this.resizeEvent.includes('parent')) ElResize.on(this.$parent, this._bind)
+        ElResize.on(this.$parent, this._bind)
     }
 
     // 解绑重新计算所需要的事件
     _unbindResizeByEvent() {
-        if (this.resizeEvent.includes('window')) window.removeEventListener('resize', this._bind);
-        if (this.resizeEvent.includes('parent')) ElResize.off(this.$parent);
+        ElResize.off(this.$parent);
     }
 
     // 手动resize

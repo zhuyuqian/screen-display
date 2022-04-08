@@ -32,12 +32,21 @@
     // import ScreenDisplay from "./src/index.js";
 
     let screen = new ScreenDisplay({
-        resizeEvent: 'parent',
-        resizeTimer: -1,
-        onResize: (a) => {
-            console.log(a)
+        el: document.getElementById('dashboard'),
+        designWidth: 1920,
+        designHeight: 1080,
+        onResize: (a, b) => {
+            console.log(a, b)
         }
     })
+    setTimeout(() => {
+        //  3秒后禁止适配
+        screen.disabledResize = true;
+        setTimeout(() => {
+            // 再过三秒手动刷新
+            screen.resize();
+        }, 3000)
+    }, 3000)
 </script>
 </body>
 </html>

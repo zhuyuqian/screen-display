@@ -13,7 +13,7 @@
 
 ### 效果
 
-[点我查看](https://www.zyq.life/npm)
+[点我查看](https://www.tvmaze.cn/dashboard)
 
 ### 特性
 
@@ -95,24 +95,11 @@ let options = {designHeight: 1080};
 let options = {resizeTimer: 300};
 ```
 
-#### resizeEvent
-类型: `String`<br>
-必须: `false`<br>
-默认: `window`<br>
-说明：默认当window或者上级元素发生resize时，触发大屏重新计算
-
-```javascript
-// 监听window resize
-let options = {resizeEvent: 'window'};
-// 监听上级div resize
-let options = {resizeEvent: 'parent'};
-```
-
 #### disabledResize
 类型: `Boolean`<br>
 必须: `false`<br>
 默认: `false`<br>
-说明：是否禁用大屏自动重新计算，当值为true时，即便window发生resize了，大屏也不会重新计算
+说明：是否禁用大屏自动重新计算，当值为true时，即便发生resize了，大屏也不会重新计算
 
 ```javascript
 let options = {disabledResize: false};
@@ -159,7 +146,7 @@ let options = {
 
 ### API
 
-#### screenInstance.resize
+#### .resize
 
 `Function`
 
@@ -170,11 +157,11 @@ let screen = new ScreenDisplay({el: '#dashboard'});
 screen.resize()
 ```
 
-#### screenInstance.destroy
+#### .destroy
 
 `Function`
 
-> 移除对window.resize和parent.resize的事件监听
+> 移除对resize的事件监听
 
 ```javascript
 let screen = new ScreenDisplay({el: '#dashboard'});
